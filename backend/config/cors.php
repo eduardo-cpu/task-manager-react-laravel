@@ -19,9 +19,14 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['http://localhost:5173', 'http://127.0.0.1:5173'],
+    'allowed_origins' => [
+        'http://localhost:5173', 
+        'http://127.0.0.1:5173',
+        'https://frontend-ek20lx6vc-eduardos-projects-abf14777.vercel.app',
+        env('FRONTEND_URL', 'http://localhost:5173'),
+    ],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => ['https://.*\.vercel\.app'],
 
     'allowed_headers' => ['*'],
 
