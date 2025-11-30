@@ -15,18 +15,13 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie', '*'],
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => [
-        'http://localhost:5173', 
-        'http://127.0.0.1:5173',
-        'https://frontend-ek20lx6vc-eduardos-projects-abf14777.vercel.app',
-        env('FRONTEND_URL', 'http://localhost:5173'),
-    ],
+    'allowed_origins' => ['*'],
 
-    'allowed_origins_patterns' => ['https://.*\.vercel\.app'],
+    'allowed_origins_patterns' => [],
 
     'allowed_headers' => ['*'],
 
@@ -34,6 +29,6 @@ return [
 
     'max_age' => 0,
 
-    'supports_credentials' => true,
+    'supports_credentials' => false,
 
 ];
